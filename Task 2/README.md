@@ -38,18 +38,18 @@ This task implements a basic password manager with a focus on secure password tr
 
 ### Steps
 
-1. **Start the server**  
-   In one terminal window:
+1. **Start the server**
+- In one terminal window:
    ```bash
    python server.py
    ```
-2.  **Start the client**
-       In another terminal window:
+3.  **Start the client**
+- In another terminal window:
        ```bash
        python client.py
        ```
 3. **Interact with the system**
-Use the following commands in the client interface:
+- Use the following commands in the client interface:
     ```
     store <website> <password> – Store a password
     get <website> – Retrieve a password
