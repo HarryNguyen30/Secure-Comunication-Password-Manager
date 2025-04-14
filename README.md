@@ -38,6 +38,7 @@ A single-client password manager where passwords are securely transmitted using 
 ---
 
 ## 📁 Repository Structure
+```
 seng2250-secure-communication-password-manager/
 ├── task1/
 │   ├── client.py             # SSL-enabled client (Chris)
