@@ -43,7 +43,7 @@ This task implements a basic password manager with a focus on secure password tr
    ```bash
    python server.py
    ```
-3.  **Start the client**
+2.  **Start the client**
 - In another terminal window:
        ```bash
        python client.py
