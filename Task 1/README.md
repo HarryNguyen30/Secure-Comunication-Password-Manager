@@ -10,7 +10,6 @@ By using SSL sockets, this program ensures that even with tools like Wireshark, 
 
 - `client.py` – Connects to the SSL-secured server, sends a message, and prints the server’s reply.
 - `server.py` – Listens for incoming SSL client connections, processes messages, and responds.
-- `sniffer.py` *(optional)* – A demonstration tool that attempts to intercept communications.
 - `certs/` – Contains all SSL certificates and keys:
   - `ca.crt` – Barry’s Certificate Authority (CA)
   - `server.crt`, `server.key` – Jill’s server certificate and private key
