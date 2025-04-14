@@ -13,7 +13,6 @@ A client-server chat system enhanced with **SSL encryption** to protect messages
 - Implements SSL socket communication in Python.
 - Prevents message sniffing via Wireshark.
 - Certificates include a CA, client cert, and server cert.
-- Sniffer/interceptor script included to demonstrate security.
 
 ### Task 2: Encrypted Password Manager with RSA
 
@@ -56,7 +55,7 @@ seng2250-secure-communication-password-manager/
 ├── reflections.pdf           # Written reflections for both tasks
 ├── .gitignore                # Ignore compiled files, certs, etc.
 └── README.md                 # Top-level overview and project documentation
-
+```
 
 ## 🚀 Getting Started
 
@@ -80,8 +79,7 @@ Reflections on both tasks, including learning outcomes, real-world relevance, an
 ## 👨‍💻 Author
 
 **Minh Tien Nguyen**  
-Bachelor of Computer Science – University of Newcastle  
-Student ID: 3423667
+Bachelor of Information Technology – University of Newcastle  
 
 ---
 
