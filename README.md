@@ -40,18 +40,22 @@ A single-client password manager where passwords are securely transmitted using 
 ## 📁 Repository Structure
 seng2250-secure-communication-password-manager/
 ├── task1/
-│   ├── client.py
-│   ├── server.py
-│   ├── certs/
-│   ├── README.md
+│   ├── client.py             # SSL-enabled client (Chris)
+│   ├── server.py             # SSL-enabled server (Jill)
+│   ├── certs/                # Folder containing CA, server, and client certificates
+│   └── README.md             # Instructions for Task 1
+│
 ├── task2/
-│   ├── client.py
-│   ├── server.py
-│   ├── primes.txt
-│   ├── README.md
-├── reflections.pdf
-├── .gitignore
-└── README.md
+│   ├── client.py             # Password manager client with RSA encryption
+│   ├── server.py             # Password manager server
+│   ├── primes.txt            # Input primes for RSA key generation
+│   ├── rsa_utils.py          # (If applicable) RSA encryption/decryption functions
+│   └── README.md             # Instructions for Task 2
+│
+├── reflections.pdf           # Written reflections for both tasks
+├── .gitignore                # Ignore compiled files, certs, etc.
+└── README.md                 # Top-level overview and project documentation
+
 
 ## 🚀 Getting Started
 
