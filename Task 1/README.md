@@ -1,25 +1,57 @@
 # Task 1: Securing a Communication Channel with SSL
 
-This task demonstrates a basic client-sever communication model in Python using SSL (set up certificate by OpenSSL) to ensure encrypted data transmission. The client connect to server, send a message and receives a response, all over a secure SSl/TLS connection.
+This task demonstrates a secure client-server communication system in Python using **SSL/TLS encryption**. SSL certificates were created with **OpenSSL**, and are used to encrypt all data transmitted between the client and server to prevent eavesdropping and unauthorized access.
 
-client.py: A client program that connects to the server, sends a message, and receives a reply from the server.
-server.py: A server program that waits for client connections, receives a message, and sends a reply back to the client.
+By using SSL sockets, this program ensures that even with tools like Wireshark, no readable data can be intercepted—highlighting the importance of encrypted communication in network security.
 
-## Setup
+---
 
-To run these programs you will need to install a recent version of python3, preferably version 3.7 or higher.
+## 🔧 Files Included
 
+- `client.py` – Connects to the SSL-secured server, sends a message, and prints the server’s reply.
+- `server.py` – Listens for incoming SSL client connections, processes messages, and responds.
+- `sniffer.py` *(optional)* – A demonstration tool that attempts to intercept communications.
+- `certs/` – Contains all SSL certificates and keys:
+  - `ca.crt` – Barry’s Certificate Authority (CA)
+  - `server.crt`, `server.key` – Jill’s server certificate and private key
+  - `client.crt`, `client.key` – Chris’s client certificate and private key
 
+---
 
+## 🛠 Setup Instructions
+
+### Requirements
+- Python 3.7 or later
+- OpenSSL (used to generate certificates)
+- Wireshark (optional, for testing sniffing)
+  
+### SSL Certificates
+SSL certificates are already included in the certs/ folder and correctly configured. Barry acts as the trusted Certificate Authority (CA), issuing certificates to both the client and server.
+
+### Installation
+Install Python packages if not already available:
+
+```bash
+pip install ssl socket
+```
 ## Running the programs
 
-To see what an interceptor adversary could find from the programs, you can install
-and use Wireshark (https://www.wireshark.org/).
+Start the server
+Open a terminal and run:
 
-SSL certificate already set up and attached with the program.
+```bash
 
-The programs work with standard Python 3.7+, first start the server in one command prompt/terminal with `python server.py`, the server will listen for incoming connections on the specified port, which means you are ready to start the client with `python client.py`. 
+python server.py
+```
+This starts Jill’s SSL server and waits for incoming connections.
 
+Run the client
+In a separate terminal window, run:
+```bash
+python client.py
+```
+This launches Chris’s client, establishes a secure connection, sends a message, and receives a response.
 
+Test interception (optional)
+Open Wireshark and inspect the packets exchanged. You'll observe that intercepted data appears encrypted and unintelligible—validating the confidentiality of the communication.
 
-The server and client will exchange messages and output what they got from each other. You can now check the interceptor, Wireshark will give random byte output and nothing meaningful that can be read.
