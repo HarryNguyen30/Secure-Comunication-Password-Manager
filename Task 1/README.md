@@ -34,24 +34,26 @@ Install Python packages if not already available:
 ```bash
 pip install ssl socket
 ```
-## Running the programs
+## ▶️ Running the Programs
 
-Start the server
-Open a terminal and run:
+### Steps
 
-```bash
+1. **Start the server**
+- Open a terminal and run:
+  
+    ```bash
+    
+    python server.py
+    ```
+    This starts Jill’s SSL server and waits for incoming connections.
 
-python server.py
-```
-This starts Jill’s SSL server and waits for incoming connections.
+3.  **Start the client**
+- In a separate terminal window, run:    
+    ```bash
+    python client.py
+    ```
+    This launches Chris’s client, establishes a secure connection, sends a message, and receives a response.
 
-Run the client
-In a separate terminal window, run:
-```bash
-python client.py
-```
-This launches Chris’s client, establishes a secure connection, sends a message, and receives a response.
-
-Test interception (optional)
-Open Wireshark and inspect the packets exchanged. You'll observe that intercepted data appears encrypted and unintelligible—validating the confidentiality of the communication.
+4. **Test interception (optional)**
+- Open Wireshark and inspect the packets exchanged. You'll observe that intercepted data appears encrypted and unintelligible—validating the confidentiality of the communication.
 
